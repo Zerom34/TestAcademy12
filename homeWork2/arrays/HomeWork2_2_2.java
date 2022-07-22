@@ -1,5 +1,5 @@
-package HomeWork2.arrays;
-import HomeWork2.utils.HomeWork2_2_1;
+package HomeWork_2.arrays;
+import HomeWork_2.utils.HomeWork2_2_1;
 
 import java.util.Arrays;
 public class HomeWork2_2_2 {
