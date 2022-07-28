@@ -1,11 +1,23 @@
-package HomeWork_3.calcs.simple;
+package HomeWork_3.calcs.additional;
 
-public class CalculatorWithMathExtends extends CalculatorWithOperator {
+import HomeWork_3.calcs.simple.CalculatorWithMathExtends;
+
+public class CalculatorWithCounterAutoSuper extends CalculatorWithMathExtends {
+    private long count;
+
+    public void incrementCountOperation() {
+        count++;
+    }
+
+
+    public long getCountOperation() {
+        return count;
+    }
+
     @Override
     public double sum(double num1, double mum1) {
         return super.sum(num1, mum1);
     }
-
 
     @Override
     public double subtraction(double num2, double mum2) {
@@ -23,23 +35,16 @@ public class CalculatorWithMathExtends extends CalculatorWithOperator {
     }
 
     @Override
-    public double deg(double num5, double mum5) {
+    public double deg(double num5, int mum5) {
+
         return super.deg(num5, mum5);
     }
-
-    public double deg(double num5, int mum5) {
-        return Math.pow(num5, mum5);
-    }
-
-    @Override
     public double mod(double num6) {
-
-        return Math.abs(num6);
+        return super.mod(num6);
     }
-
-    @Override
-    public double sqNumb(double num7) {
-
-        return Math.sqrt(num7) ;
+    public double sqNumb(double num7){
+        return super.sqNumb(num7);
     }
 }
+
+
