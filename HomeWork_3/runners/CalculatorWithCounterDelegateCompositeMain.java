@@ -9,7 +9,7 @@ public class CalculatorWithCounterDelegateCompositeMain {
         double resDiv = calcWCAC.div(28.0, 5.0);
         double resDeg = calcWCAC.deg(resDiv, 2);
         double resFinalSum = calcWCAC.sum(resSum, resDeg);
-        double result = 4.1 + resFinalSum;
+        double result = calcWCAC.sum(4.1, resFinalSum);
         System.out.println(result);
         System.out.println("Калькулятор был использован " + calcWCAC.getCountOperation() + " раз");
     }

@@ -13,7 +13,7 @@ public class CalculatorWithCounterAutoSuperMain {
         calcWCAS.incrementCountOperation();
         double resFinalSum = calcWCAS.sum(resSum, resDeg);
         calcWCAS.incrementCountOperation();
-        double result = 4.1 + resFinalSum;
+        double result = calcWCAS.sum(4.1, resFinalSum);
         System.out.println(result);
         System.out.println("Калькулятор был использован " + calcWCAS.getCountOperation() + " раз");
     }

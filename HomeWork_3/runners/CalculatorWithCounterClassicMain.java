@@ -12,7 +12,7 @@ public class CalculatorWithCounterClassicMain {
         calculatorwithcounterclassic.incrementCountOperation();
         double resFinalSum = calculatorwithcounterclassic.sum(resSum, resDeg);
         calculatorwithcounterclassic.incrementCountOperation();
-        double result = 4.1 + resFinalSum;
+        double result = calculatorwithcounterclassic.sum(4.1, resFinalSum);
         System.out.println(result);
 
         /**
