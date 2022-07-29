@@ -4,9 +4,6 @@ import HomeWork_3.calcs.simple.CalculatorWithOperator;
 
 public class CalculatorWithCounterAutoCompositeInterfaceMain {
     public static void main(String[] args) {
-        /**
-         * Выводит результат используя объект класса calculatorWithCounterAutoAgregationInterface и добавили автоматический счётчик
-         */
         CalculatorWithCounterAutoAgregationInterface calsWCAAI=new CalculatorWithCounterAutoAgregationInterface(new CalculatorWithOperator());
         double resSum = calsWCAAI.mult(15.0, 7.0);
         double resDiv = calsWCAAI.div(28.0, 5.0);
