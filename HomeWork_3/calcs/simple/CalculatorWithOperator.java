@@ -1,6 +1,6 @@
 package HomeWork_3.calcs.simple;
-
-public class CalculatorWithOperator {
+import HomeWork_3.calcs.api.ICalculator;
+public class CalculatorWithOperator implements ICalculator {
     public double sum(double num1, double mum1) { //Сумма
         double sum = num1 + mum1;
         return sum;
