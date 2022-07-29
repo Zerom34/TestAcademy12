@@ -1,20 +1,22 @@
-# HomeWork_2
- 1.1.1 loops.HomeWork2_1_1_1
- 
- 1.1.2 loops.HomeWork2_1_1_2 
+# HomeWork_3
+ Задание 1 - runners.WithoutCalculatorMain
 
- 1.2 loops.HomeWork2_1_2 
-
- 1.3 loops.HomeWork2_1_3 
-
- 1.5 loops.HomeWork2_1_5 
-
- 1.6 loops.HomeWork2_1_6 
-
-   2.1 utils.HomeWork2_2_1 
-
- 2.2 arrays.HomeWork2_2_2 
-
- 2.4 arrays.HomeWork2_2_4
-
-3. bubbles.pdf and bubbles.vsdx
+Задание 2 - calcs.simple.CalculatorWithOperator + runners.CalculatorWithOperatorMain
+  
+Задание 3 - calcs.simple.CalculatorWithMathCopy + runners.CalculatorWithMathCopyMain
+  
+Задание 4 - calcs.simple.CalculatorWithMathExtends + runners.CalculatorWithMathExtendsMain
+  
+Задание 5 - calcs.additional.CalculatorWithCounterClassic + runners.CalculatorWithCounterClassicMain
+  
+Задание 6 - calcs.additional.CalculatorWithCounterAutoSuper + runners.CalculatorWithCounterAutoSuperMain
+  
+Задание 7 - calcs.additional.CalculatorWithCounterAutoComposite + runners.CalculatorWithCounterDelegateCompositeMain
+  
+Задание 8 - calcs.additional.CalculatorWithCounterAutoAgregation + runners.CalculatorWithCounterDelegateAgregationMain
+  
+Задание 9 - calcs.additional.CalculatorWithCounterAutoChoiceAgregation + runners.CalculatorWithCounterDelegateChoiceAgregationMain
+  
+Задание 10 - calcs.api.ICalculator
+  
+Задание 11 - calcs.additional.CalculatorWithCounterAutoAgregationInterface + runners.CalculatorWithCounterAutoCompositeInterfaceMain
