@@ -1,6 +1,5 @@
 package HomeWork_3.calcs.additional;
 import HomeWork_3.calcs.api.ICalculator;
-import HomeWork_3.calcs.simple.CalculatorWithOperator;
 
 public class CalculatorWithCounterAutoAgregationInterface implements ICalculator {
     private long count;
@@ -10,7 +9,7 @@ public class CalculatorWithCounterAutoAgregationInterface implements ICalculator
         this.calculator = calculator;
     }
 
-    void incrementCountOperation() {
+    public void incrementCountOperation() {
         count++;
     }
 

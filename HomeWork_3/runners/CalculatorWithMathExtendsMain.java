@@ -1,7 +1,7 @@
 package HomeWork_3.runners;
 import HomeWork_3.calcs.simple.CalculatorWithMathExtends;
 public class CalculatorWithMathExtendsMain {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         CalculatorWithMathExtends calculatorWithMathExtends = new CalculatorWithMathExtends();
         double resSum = calculatorWithMathExtends.mult(15.0, 7.0);

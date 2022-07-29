@@ -3,7 +3,7 @@ package HomeWork_3.runners;
 import HomeWork_3.calcs.additional.CalculatorWithCounterAutoComposite;
 
 public class CalculatorWithCounterDelegateCompositeMain {
-    public static void main(String args[]){
+    public static void main(String[] args){
         CalculatorWithCounterAutoComposite calcWCAC = new CalculatorWithCounterAutoComposite();
         double resSum = calcWCAC.mult(15.0, 7.0);
         double resDiv = calcWCAC.div(28.0, 5.0);

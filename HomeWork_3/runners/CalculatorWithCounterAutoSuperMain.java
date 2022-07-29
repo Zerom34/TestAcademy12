@@ -3,7 +3,7 @@ package HomeWork_3.runners;
 import HomeWork_3.calcs.additional.CalculatorWithCounterAutoSuper;
 
 public class CalculatorWithCounterAutoSuperMain {
-    public static void main(String args[]){
+    public static void main(String[] args){
         CalculatorWithCounterAutoSuper calcWCAS = new CalculatorWithCounterAutoSuper();
         double resSum = calcWCAS.mult(15.0, 7.0);
         calcWCAS.incrementCountOperation();

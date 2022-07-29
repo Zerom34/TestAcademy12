@@ -3,7 +3,7 @@ import HomeWork_3.calcs.simple.CalculatorWithMathCopy;
 
 public class CalculatorWithCounterAutoAgregation {
 
-    CalculatorWithMathCopy calc;
+    public CalculatorWithMathCopy calc;
 
     public CalculatorWithCounterAutoAgregation(CalculatorWithMathCopy calc) {
         this.calc = calc;

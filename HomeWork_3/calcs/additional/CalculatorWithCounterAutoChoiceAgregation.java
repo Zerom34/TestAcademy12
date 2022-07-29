@@ -5,9 +5,9 @@ import HomeWork_3.calcs.simple.CalculatorWithOperator;
 
 public class CalculatorWithCounterAutoChoiceAgregation {
 
-    CalculatorWithOperator cwo;
-    CalculatorWithMathCopy cwmc;
-    CalculatorWithMathExtends cwme;
+    public CalculatorWithOperator cwo;
+    public CalculatorWithMathCopy cwmc;
+    public CalculatorWithMathExtends cwme;
 
     public CalculatorWithCounterAutoChoiceAgregation(CalculatorWithOperator calc) {
         this.cwo = calc;
