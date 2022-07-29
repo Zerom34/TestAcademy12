@@ -3,7 +3,7 @@ import HomeWork_3.calcs.api.ICalculator;
 
 public class CalculatorWithCounterAutoAgregationInterface implements ICalculator {
     private long count;
-    public ICalculator calculator;
+    private final ICalculator calculator;
 
     public CalculatorWithCounterAutoAgregationInterface(ICalculator calculator) {
         this.calculator = calculator;
