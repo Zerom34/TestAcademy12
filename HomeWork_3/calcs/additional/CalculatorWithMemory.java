@@ -2,7 +2,7 @@ package HomeWork_3.calcs.additional;
 import HomeWork_3.calcs.api.ICalculator;
 
 public class CalculatorWithMemory {
-    private final ICalculator iCalculator; //Поля
+    private final ICalculator iCalculator; //Поля (нач)
     private long counter;
     private double memory;
     private double lastRes;
