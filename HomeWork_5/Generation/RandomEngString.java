@@ -1,6 +1,7 @@
 package HomeWork_5.Generation;
 import java.util.Random;
-public class RandomString {
+
+public class RandomEngString {
     /* Метод возвращает "имя" состоящее из случайных символов
     @param maxLit - длинна сгенерированного имени
      Первая буква имени - строчная
@@ -10,11 +11,11 @@ public class RandomString {
         String randomName = "";
         for (int i = 0; i < maxLit; i++) {
             Random ourNumbOfLit = new Random();
-            String engLet = "qwertyuiopasdfghjklzxcvbnm123456789";
+            String engLet = "qwertyuiopasdfghjklzxcvbnm";
             String letterChoose = engLet + engLet.toUpperCase();
             char letter = letterChoose.charAt(ourNumbOfLit.nextInt(letterChoose.length()));
             if (i == 0) {
-               letter = Character.toUpperCase(letter);
+                letter = Character.toUpperCase(letter);
             }
             if (i != 0) {
                 letter = Character.toLowerCase(letter);
