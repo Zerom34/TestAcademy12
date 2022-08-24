@@ -1,4 +1,4 @@
-package HomeWork_5.AllGeneration;
+package HomeWork_5.UseToWork;
 
 import java.util.Random;
 
@@ -33,8 +33,11 @@ public class AllGeneration {
      Первая буква имени - строчная
      @return - возвращает сгенерированное имя
      */
-    public static String randomEngString (int maxLit){
+    public static String randomEngString (){
         String randomEngString = "";
+        int min = 5;
+        int max = 13;
+        int maxLit = (new Random().nextInt(max - min) + min);
         for (int i = 0; i < maxLit; i++) {
             Random ourNumbOfLit = new Random();
             String engLet = "qwertyuiopasdfghjklzxcvbnm";
@@ -57,8 +60,11 @@ public class AllGeneration {
      Первая буква имени - строчная
      @return - возвращает сгенерированное имя
      */
-    public static String randomRusString (int maxLit) {
+    public static String randomRusString () {
         String randomRusString = "";
+        int min = 1;
+        int max = 10;
+        int maxLit = (new Random().nextInt(max - min) + min);
         for (int i = 0; i < maxLit; i++) {
             Random ourNumbOfLit = new Random();
             String rusLet = "абвгдеёжзийклмнопрстуфхцчъыьэюя";
@@ -84,12 +90,12 @@ public class AllGeneration {
     */
 
     public static String randomName(){
-        String [] randomName = {"Август","Антон","Авель","Петр","Илья","Иван","Боб","Джон","Кейт","Максим","Альфонс","Абрахам","Гарольд","Томас",
+        String [] randomName = {"","Антон","Авель","Петр","Илья","Иван","Боб","Джон","Кейт","Максим","Альфонс","Абрахам","Гарольд","Томас",
                 "Степан","Олаф","Генри","Саймон","Джон","Кени","Стэн","Эрик","Эдик","Вячеслав","Всеслав","Елена","Алена","Алина","Ольга","Таня",
                 "Марта","Виктория","Даниела","Николай","Александр","Виктор","Надежда","Дарья","Наталья","Мария","Владислав","Альбус","Бонифаций"
         };
         int min = 1;
-        int max = randomName.length;
+        int max = 42;
         int randomNumb = (new Random().nextInt(max - min) + min);
 
         return randomName[randomNumb];
@@ -103,12 +109,12 @@ public class AllGeneration {
     @return Возвращает случайное имя
     */
     public static String randomAnimalName(){
-        String [] randomAnimalName = {"Завтрак","Закуска","Тефтелька","Владыка Тьмы","Лорд Коттермотрт","Боник","Алиса","Попугайчик","Хомячек",
+        String [] randomAnimalName = {"","Закуска","Тефтелька","Владыка Тьмы","Лорд Коттермотрт","Боник","Алиса","Попугайчик","Хомячек",
                 "Безымянный", "Дема","Альтаир","Стефа","Бима","Кошкозавр","Кошкозавриха","Бастет","Зевс","Аид","Нобель","Дон Собакеоне","Суслки",
                 "Сильвер", "Кьяра", "Бэтмен", "Малыш", "Гоги", "Маркиз", "Луна", "Эмми", "Черника", "Кит", "Шепард"
         }; //Вображения у меня нет, так что просто взял клички своих любимцев и + поспрашивал у друзей
         int min = 1;
-        int max = randomAnimalName.length;
+        int max = 32;
         int randomNumb = (new Random().nextInt(max - min) + min);
         return randomAnimalName[randomNumb];
     }
@@ -119,14 +125,11 @@ public class AllGeneration {
          Первая буква имени - строчная
          @return - возвращает сгенерированное имя
          */
-    public static String randomPassword(int maxLit){
+    public static String randomPassword(){
         String randomPassword = "";
-        if (maxLit > 10){
-            System.out.println("Пароль не должен превышать 10 символов");
-        } else if (maxLit < 5) {
-            System.out.println("Пароль должен быть состоять минимум из 5 символов");
-        }
-        else {
+        int min = 5;
+        int max = 11;
+        int maxLit = (new Random().nextInt(max - min) + min);
             for (int i = 0; i < maxLit; i++) {
                 Random ourNumbOfLit = new Random();
                 String engLet = "qwertyuiopasdfghjklzxcvbnm123456789";
@@ -135,8 +138,14 @@ public class AllGeneration {
                 String letterS = String.valueOf(letter);
                 randomPassword = randomPassword.concat(letterS);
             }
-        }
         return randomPassword;
     }
+    public static int randomAge(){
+        int [] randomAge = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+        int min = 1;
+        int max = randomAge.length;
+        int randomNumb = (new Random().nextInt(max - min) + min);
 
+        return randomAge[randomNumb];
+    }
 }
