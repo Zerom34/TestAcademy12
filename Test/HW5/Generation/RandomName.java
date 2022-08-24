@@ -1,4 +1,4 @@
-package HomeWork_5.Generation;
+package Test.HW5.Generation;
 import java.util.Random;
 
 public class RandomName {
