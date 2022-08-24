@@ -7,8 +7,8 @@ public class RandomEngString {
      Первая буква имени - строчная
      @return - возвращает сгенерированное имя
      */
-    public static String randomName (int maxLit){
-        String randomName = "";
+    public static String randomEngString (int maxLit){
+        String randomEngString = "";
         for (int i = 0; i < maxLit; i++) {
             Random ourNumbOfLit = new Random();
             String engLet = "qwertyuiopasdfghjklzxcvbnm";
@@ -21,8 +21,8 @@ public class RandomEngString {
                 letter = Character.toLowerCase(letter);
             }
             String letterS = String.valueOf(letter);
-            randomName = randomName.concat(letterS);
+            randomEngString = randomEngString.concat(letterS);
         }
-        return randomName;
+        return randomEngString;
     }
 }

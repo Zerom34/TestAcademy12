@@ -8,8 +8,8 @@ public class RandomRusString {
      Первая буква имени - строчная
      @return - возвращает сгенерированное имя
      */
-    public static String randomName (int maxLit){
-        String randomName = "";
+    public static String randomRusString (int maxLit){
+        String randomRusString = "";
         for (int i = 0; i < maxLit; i++) {
             Random ourNumbOfLit = new Random();
             String rusLet = "абвгдеёжзийклмнопрстуфхцчъыьэюя";
@@ -23,9 +23,9 @@ public class RandomRusString {
                 letter = Character.toLowerCase(letter);
             }
             String letterS = String.valueOf(letter);
-            randomName = randomName.concat(letterS);
+            randomRusString = randomRusString.concat(letterS);
         }
-        return randomName;
+        return randomRusString;
     }
 }
 

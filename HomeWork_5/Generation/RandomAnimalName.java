@@ -18,7 +18,6 @@ public class RandomAnimalName {
         int min = 1;
         int max = randomAnimalName.length;
         int randomNumb = (new Random().nextInt(max - min) + min);
-
         return randomAnimalName[randomNumb];
     }
 }
