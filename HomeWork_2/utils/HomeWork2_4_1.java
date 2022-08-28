@@ -1,5 +1,6 @@
 package HomeWork_2.utils;
-
+import java.util.Random;
+import java.util.Scanner;
 public class HomeWork2_4_1 {
 public static void main(String[] args) {
     int[] array1 = new int[]{36, 18, 30, 21, 81, 96, 3, 47};
@@ -102,5 +103,41 @@ public static void main(String[] args) {
         stringBuilder.append("]");
 
         return stringBuilder.toString();
+    }
+    public static int[] arrayFromConsole() {
+        int size;
+        int[] array;
+        System.out.println("Массив какого размера?");
+        Scanner scanner = new Scanner(System.in);
+        if (!scanner.hasNextInt()) {
+            System.out.println("неверный ввод");
+            System.out.println("Получен массив размером 0");
+            scanner.close();
+        }
+        size = scanner.nextInt();
+        array = new int[size];
+        for (int i = 0; i < array.length; i++) {
+            System.out.println("номер позиции " + i);
+            if (scanner.hasNextInt()) {
+                array[i] = scanner.nextInt();
+                System.out.println("на позиции " + i + " число= " + array[i]);
+            } else {
+                System.out.println("неверный ввод " + i);
+                System.out.println("Получен массив размером 0 с позиции " + i);
+                scanner.close();
+                return array;
+            }
+        }
+        scanner.close();
+        return array;
+    }
+
+    public static int[] arrayRandom(int size, int maxValueExclusion) {
+        int[] array = new int[size];
+        Random random = new Random();
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(maxValueExclusion);
+        }
+        return array;
     }
 }
