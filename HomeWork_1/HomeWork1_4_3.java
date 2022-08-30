@@ -7,17 +7,24 @@ public class HomeWork1_4_3 {
         int a = console.nextInt();
         System.out.println("Введите делитель");
         int b = console.nextInt();
+        System.out.println(div(a, b));
+    }
+    public static String div(int a, int b){
+        String result;
         if (b == 0) {
-            System.out.println("На 0 не делиться");
+            return("На 0 не делиться");
         }
-        else if (a%b == 0)  {
-            System.out.println(a + " целочисленно делится на " + b + " и равняется: " + a/b + " остаток равняется: " + a%b);
+        if (a%b == 0)  {
+            result = a + " целочисленно делится на " + b + " и равняется: " + a/b + " остаток равняется: " + a%b ;
+            return result;
         }
         else if (a/b == 0) {
-            System.out.println(a + " не делится на " + b + " остаток равняется: " + a%b);
+            result = a + " не делится на " + b + " остаток равняется: " + a%b;
+            return result;
         }
         else {
-            System.out.println(a + " целочисленно не делится на " + b + " и результат деления равняется: " + a/b + " а остаток " + a%b);
+            result = a + " целочисленно не делится на " + b + " и результат деления равняется: " + a/b + " а остаток " + a%b;
+            return result;
         }
     }
 }

@@ -7,15 +7,18 @@ public class HomeWork1_4_5 {
         Scanner console = new Scanner(System.in);
         System.out.println("Введите символ");
         String a = console.nextLine();
-        System.out.println(a);
+        System.out.println(numOr(a));
+    }
+    public static String numOr (String a){
         char c = a.charAt(0);
-        boolean result = Character.isLetter(c);;
+        boolean result = Character.isLetter(c);
         if (result) {
-            System.out.println(a + " - это буква");
+            return (a + " - это буква");
         }
         if (!result) {
-             System.out.println(a + " - это не буква");
+            return (a + " - это не буква");
         }
+        return "Ошибка";
     }
 }
 

@@ -40,4 +40,6 @@ public class CalculatorWithOperator implements ICalculator {
     public double sqNumb(double num7) { //Нахождение квадратного корня
         return Math.sqrt(num7);
     }
+
 }
+
