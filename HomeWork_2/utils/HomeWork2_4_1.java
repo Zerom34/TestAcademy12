@@ -2,45 +2,20 @@ package HomeWork_2.utils;
 import java.util.Random;
 import java.util.Scanner;
 public class HomeWork2_4_1 {
-public static void main(String[] args) {
-    int[] array1 = new int[]{36, 18, 30, 21, 81, 96, 3, 47};
-    //Ответ 4.1.1
-    System.out.print("Массив до проведения сортировки: ");
-    for (int element : array1) {
-        System.out.print(element + " ");
-    }
-    System.out.println();
-    bubble(array1);
-    System.out.println("Массив пузырьковой сортировки : " + arrayBubbleToString(array1));
-
-    int[] array2 = new int[]{21, 81, 96, 3, 47, 30, 22, 55};
-    //Ответ 4.1.2
-    System.out.print("Массив до проведения сортировки: ");
-    for (int element : array2) {
-        System.out.print(element + " ");
-    }
-    System.out.println();
-    shake(array2);
-    System.out.println("Массив шейкерной сортировки : " + arrayShakerToString(array2));
-}
-
     //Пузырьковая сортировка, при которой перебирается массив и сравниваются элементы,
     // пока они не займут свои позиции и не будут идти по возрастанию.
     // Сортировка идет слева неправо и потом возвращается после последнего элемента сразу к первому и занов
-    public static void bubble(int[] arr) {
-        boolean sort = false;
-
-        while (!sort) {
-            sort = true;
-            for (int i = 1; i < arr.length; i++) {
-                if (arr[i - 1] > arr[i]) {
-                    int temp = arr[i];
-                    arr[i] = arr[i - 1];
-                    arr[i - 1] = temp;
-                    sort = false;
+    public static int[] bubble(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = (arr.length - 1); j > i; j--) {
+                if (arr[j - 1] > arr[j]) {
+                    int temp = arr[j - 1];
+                    arr[j - 1] = arr[j];
+                    arr[j] = temp;
                 }
             }
         }
+        return arr;
     }
 
     public static String arrayBubbleToString(int[] arr) {

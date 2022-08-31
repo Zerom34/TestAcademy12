@@ -9,7 +9,7 @@ public class HomeWork2_1_1_2 {
         System.out.println(" = ".concat(String.valueOf (recursion(num) )));
     }
 
-    static int recursion(int num) {
+    public static int recursion(int num) {
         int result;
         if (num < 2) {
             return 1;

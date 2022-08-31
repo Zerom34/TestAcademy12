@@ -19,19 +19,18 @@ public class CalculatorWithOperator implements ICalculator {
 
 
     public double deg(double num5, double mum5) { //Возведение num5 в целочисоенную степнь mum5
-        double deg = 1;
-        for (int i=0; i <= mum5; i++) {
-            deg = num5*num5;
+        double deg = num5;
+        for (int i=0; i < mum5-1; i++) {
+            deg = deg*num5;
         }
         return deg;
     }
 
     public double mod(double num6) { //Модуль числа
         double resMod ;
-        double a = 0;
-        if (num6<0) resMod = -a;
+        if (num6<0) resMod = -1 * num6;
         else {
-            resMod = a;
+            resMod = num6;
         }
         return resMod;
     }

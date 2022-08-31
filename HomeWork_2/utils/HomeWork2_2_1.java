@@ -30,11 +30,11 @@ public class HomeWork2_2_1 {
         return array;
     }
     //Рандомный массив с заданными условиями (формирование)
-    public static int[] arrayRandom(int size, int maxValueExclusion) {
+    public static int[] arrayRandom(int size, int maxValue) {
         int[] array = new int[size];
         Random x = new Random();
         for (int i = 0; i < array.length; i++) {
-            array[i] = x.nextInt(maxValueExclusion + 1);
+            array[i] = x.nextInt(maxValue + 1);
         }
         return array;
     }

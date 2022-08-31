@@ -1,38 +1,24 @@
 package HomeWork_2.loops;
-import java.util.Scanner;
 public class HomeWork2_1_2 {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Введите целое число");
-        if (scan.hasNextInt()) {
-            int num = scan.nextInt();
-            String pr = Integer.toString(num);
-            long result = 1;
-            int[] mas = new int[pr.length()];
-            for (int m = mas.length - 1; m >= 0; m--) {
-                if (num > 9) {
-                    mas[m] = num % 10;
-                    num = num / 10;
-                }
-                else {
-                    mas[m] = num;
-                }
+    public static String rev(String numberStr) {
+        StringBuilder resOfString = new StringBuilder();
+        int result = 1;
+        for (char c : numberStr.toCharArray()) {
+            if (numberStr.contains(".")) {
+                return "Введено не целое число";
             }
-            for (int i = 0; i < mas.length; i++) {
-                if (i == 0) {
-                    System.out.print(mas[i]);
-                    result *= mas[i];
-                }
-                else {
-                    System.out.print(" * " + mas[i]);
-                    result *= mas[i];
-                }
+            if (!Character.isDigit(c)) {
+                return "Введено не число";
             }
-            System.out.println(" = " + result);
-        } else if (scan.hasNextDouble()) {
-            System.out.println("Введенное число не является целым!");
-        } else if (scan.hasNextLine()) {
-            System.out.println("Введеное не является числом");
         }
+        char[] mass = numberStr.toCharArray();
+        for (int i = 0; i < mass.length; i++) {
+            int charToNumber = Character.digit(mass[i], 10);
+            result *= charToNumber;
+            String multiplyOrEquals = i == mass.length - 1 ? "=" + result : "*";
+            resOfString.append(mass[i]).append(multiplyOrEquals);
+        }
+        return resOfString.toString();
     }
+
 }

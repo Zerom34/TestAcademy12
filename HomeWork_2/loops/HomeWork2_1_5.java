@@ -1,126 +1,83 @@
 package HomeWork_2.loops;
-import java.util.Scanner;
 import java.util.Random;
 public class HomeWork2_1_5 {
-    public static void main(String[] args) {
-        System.out.println("З.1. Найти наибольшую цифру натурального числа. Ответ:"+ Work1());
-        System.out.println("З.2. Вероятность четных случайных чисел. Ответ:"+ Work2());
-        System.out.println("З.3. Посчитать четные и нечетные цифры числа. Ответ:"+ Work3());
-        System.out.println("З.4. Ряд Фибоначчи. Ответ:"+ Work4());
-        System.out.println("З.5. Вывести ряд чисел в диапазоне с шагом. Ответ:"+ Work5());
-        System.out.println("1.5.6. Переворот числа. Ответ:"+ Work6());
+
+    public static int largOf(int maxOf) {
+        int res = 0;
+        while (maxOf > 9) {
+            int num = maxOf % 10;
+            if (num > res) {
+                res = num;
+            }
+            maxOf = maxOf / 10;
+        }
+        return res;
     }
-
-
-    public static int Work1() { //Найти наибольшую цифру натурального числа
-        Scanner cons = new Scanner(System.in);
-        System.out.println("Введите число");
-        String num = cons.nextLine();
-        char[] mas1 = num.toCharArray();
-        int[] mas2 = new int[num.length()];
-        int maxnum = Integer.MIN_VALUE;
-        for (int i = 0; i < num.length(); i++) {
-            mas2[i] = Character.getNumericValue(mas1[i]);
-            if (mas2[i] > maxnum) {
-                maxnum = mas2[i];
+    public static double verOfRandom() {
+        int num = 0;
+        for (int i = 0; i < 1001; i++) {
+            Random r = new Random();
+            int random = r.nextInt();
+            if (random % 2 == 0) {
+                num = num + 1;
             }
         }
-        return maxnum;
+        return num * 100 / 1000;
     }
-
-
-    public static int Work2() {     //Вероятность четных случайных чисел
-        int maxnumber = 0;
-        int[] mas = new int[1000];
-        Random x = new Random();
-        for (int i = 0; i < 1000; i++) {
-            mas[i] = x.nextInt();
-            if (mas[i] % 2 == 0) {
-                maxnumber += 1;
-            }
-        }
-        return maxnumber;
-    }
-
-
-    public static StringBuilder Work3() {     //Посчитать четные и нечетные цифры числа
-        Scanner cons = new Scanner(System.in);
-        System.out.println("Введите число в котором будет производиться подсчет четных и нечетных чисел");
-        String num = cons.nextLine();
-        char[] mas1 = num.toCharArray();
-        int[] mas2 = new int[num.length()];
-        int numb1 = 0;
-        int numb2 = 0;
-        for (int i = 0; i < num.length(); i++) {
-            mas2[i] = Character.getNumericValue(mas1[i]);
-            if (mas2[i] % 2 != 0) {
-                numb1 += 1;
-            } else {
-                numb2 += 1;
-            }
-        }
-        StringBuilder resul = new StringBuilder();
-        resul.append("Нечетных чисел: " + numb1 + "  Четных чисел: " + numb2);
-        return resul;
-    }
-
-
-    public static String Work4() {     // Ряд Фибоначчи
-        int num1 = 1;
-        int num2 = 2;
-        String result = "";
-        Scanner cons = new Scanner(System.in);
-        System.out.println("Введите число символов");
-        int Soupon = cons.nextInt();
-        if (Soupon <= 0) {
-            result = "Введите число символов!!!";
-        } else if (Soupon == 1) {
-            result += num1;
-        } else if (Soupon == 2) {
-            result += num1 + " " + num2;
+    public static int[] chOrNe(int chOrNe) {
+        int fir = chOrNe;
+        int[] mass = new int[2];
+        if (fir % 2 == 0 && fir < 9) {
+            mass = new int[]{1, 0};
+        } else if (fir % 2 != 0 && fir < 9) {
+            mass = new int[]{0, 1};
         } else {
-            result += num1 + " " + num2;
-            for (int i = 0; i < Soupon - 2; i++) {
-                if (i % 2 == 0) {
-                    num1 += num2;
-                    result += " " + num1;
+            int numF = 0;
+            int numT = 0;
+            while (chOrNe > 0) {
+                int a = chOrNe % 10;
+                chOrNe = (chOrNe - a) / 10;
+                if (a % 2 == 0) {
+                    numT = numT + 1;
+                    mass[0] = numT;
                 } else {
-                    num2 += num1;
-                    result += " " + num2;
+                    numF = numF + 1;
+                    mass[1] = numF;
                 }
             }
         }
-        return result;
+        return mass;
     }
-
-
-    public static String Work5() {     //Вывести ряд чисел в диапазоне с шагом
-        int min = 0;
-        String result = "0";
-        Scanner cons = new Scanner(System.in);
-        System.out.println("Введите максимум диапозона");
-        int max = cons.nextInt();
-        System.out.println("Введите шаг");
-        int step = cons.nextInt();
-        int count = min;
-        while (count < max) {
-            count += step;
-            result += " " + count;
+    public static int[] rFib(int count) {
+        int numF = 0;
+        int numS = 1;
+        int rFiban;
+        int[] mass = new int[count];
+        for (int i = 0; i < mass.length; i++) {
+            rFiban = numF + numS;
+            numF = numS;
+            numS = rFiban;
+            mass[i] = numS;
         }
-        return result;
+        return mass;
     }
-
-
-
-    public static String Work6() {     //Переворот числа
-        Scanner cons = new Scanner(System.in);
-        System.out.println("Введите число");
-        String num = cons.nextLine();
-        String result = "";
-        char[] array = num.toCharArray();
-        for (int i = array.length - 1; i >= 0; i--) {
-            result += array[i];
+    public static int[] numDiOfOf(int from, int to, int by) {
+        int res = from;
+        int i;
+        for (i = 0; res <= to; ++i) {
+            res = res + by;
         }
-        return result;
+        res = from;
+        int[] mass = new int[i];
+        for (int j = 0; j < i; j++) {
+            mass[j] = res;
+            res = res + by;
+        }
+        return mass;
+    }
+    public static String revol(String rev) {
+        StringBuilder valueForString = new StringBuilder(rev);
+        valueForString.reverse();
+        return valueForString.toString();
     }
 }

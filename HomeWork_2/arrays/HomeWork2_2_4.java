@@ -1,44 +1,23 @@
 package HomeWork_2.arrays;
-import HomeWork_2.utils.HomeWork2_2_1;
 
 public class HomeWork2_2_4 {
     public static void main(String[] args) {
-        //Выводы полученных результатов
-        //Вывод 2.4.1. Сумма четных положительных элементов массива
-        System.out.println(sum(HomeWork2_2_1.arrayRandom(50, 100)));
-        //Вывод 2.4.2. Максимальный из элементов массива с четными индексами
-        System.out.println(max(HomeWork2_2_1.arrayRandom(50, 100)));
-        //Вывод 2.4.3. Элементы массива, которые меньше среднего арифметического
-        System.out.println(average(HomeWork2_2_1.arrayRandom(50, 100)));
-        //Вывод 2.4.4. Найти два наименьших (минимальных) элемента массива
-        System.out.println(minmas(HomeWork2_2_1.arrayRandom(50, 100)));
-        //Вывод 2.4.5. Сжать массив, удалив элементы, принадлежащие интервалу
-        System.out.println(smallmas(HomeWork2_2_1.arrayRandom(50, 100)));
-        //Вывод 2.4.6. Сумма цифр массива
-        System.out.println(summas(HomeWork2_2_1.arrayRandom(50, 100)));
+
     }
 
-
-    /** Метод sum = Сумма четных положительных элементов массива
-     * Метод max = Максимальный из элементов массива с четными индексами
-     * Метод average = Элементы массива, которые меньше среднего арифметического
-     * Метод minmas = Найти два наименьших (минимальных) элемента массива
-     * Метод smallmas = Сжать массив, удалив элементы, принадлежащие интервалу
-     * Метод summas = Сумма цифр массива
-     */
-
-
-    public static int sum(int[] array) { //Нахождение суммы всех четных чисел в массиве
+    public static int sum(int[] array) {
         int sum = 0;
 
         for (int i = 0; i < array.length; i++) {
-            if (i % 2 == 0) {
-                sum += i;
+            if (array[i]>0) {
+                if (i == 0 || i % 2 == 0) {
+                    sum = sum + array[i];
+                }
             }
         }
         return sum;
     }
-    public static int max(int[] array) { //Нахождение максимального четного числа в массиве
+    public static int max(int[] array) {
         int maxValue = Integer.MIN_VALUE;
 
         for (int i = 0; i < array.length; i++) {
@@ -50,77 +29,73 @@ public class HomeWork2_2_4 {
         }
         return maxValue;
     }
-    public static StringBuilder average(int[] array) { //Нахождение всех чисел меньше ср. ариф.
-        StringBuilder stringBuilder = new StringBuilder();
+    public static String average(int[] array) {
         int sum = 0;
+        String res = "";
         for (int i = 0; i < array.length; i++) {
-            sum += i;
+            sum = sum + array[i];
         }
 
-        int average = sum / array.length;
+        int average = (sum / array.length);
         for (int i = 0; i < array.length; i++) {
-            if (i < average) {
-                stringBuilder.append(i + " ");
+            if (array[i] <= average) {
+                res = res + array[i] + " ";
             }
         }
-        stringBuilder.setLength(stringBuilder.length() - 1);
-        return stringBuilder;
+        return res;
     }
-    public static StringBuilder minmas(int[] array) { //Нахождение двух минимальных числа
-        StringBuilder stringBuilder = new StringBuilder();
+    public static String minmas(int[] array) {
         int min= Integer.MAX_VALUE;
         int min2 = Integer.MAX_VALUE - 1;
-
         for (int element : array) {
             if (element < min) {
                 min2 = min;
                 min = element;
             }
         }
-        stringBuilder.append("Two minimums : " + min + " и " + min2);
-        return stringBuilder;
+        return "Два минимальных элемента массива: " + min + " и " + min2;
     }
-    public static StringBuilder smallmas(int[] array) { //Сжать массив
-        StringBuilder stringBuilder = new StringBuilder();
-        int counter = 0;
-
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] >= 5 && array[i] <= 25) {
-                counter++;
-                for (int k = i; k < array.length - 1; k++) {
-                    array[k] = array[k + 1];
-                }
-                array[array.length - counter] = 0;
-                i--;
+    public static String smallmas(int[] array, int min, int max) {
+        int[] arrayWork = new int[array.length];
+        int flagIndex = 0;
+        String a = "";
+        for (int j : array) {
+            if (!(j >= min && j <= max)) {
+                arrayWork[flagIndex] = j;
+                flagIndex++;
             }
         }
-        System.out.print("Your squeezed array : ");
+        array = arrayWork;
         for (int i = 0; i < array.length; i++) {
-            stringBuilder.append(i + " ");
-        }
-        return stringBuilder;
-    }
-    public static StringBuilder summas(int[] array) {  //Сумма цифр массива
-        StringBuilder stringBuilder = new StringBuilder();
-        int sum = 0;
+            if (array[i]==0){
+                a = a + "";
+            }
+            else {
+                    a = a + array[i] + " ";
 
-        for (int element : array) {
-            if (element > 9) {
-                int first = element / 10;
-                int second = element % 10;
-                if (first <= 9) {
-                    sum += first + second;
+            }
+        }
+        return "{ "+a+"}";
+    }
+    public static int summas(int[] array) {
+        int sumNumber = 0;
+        for (int i : array) {
+            if (i > 9) {
+                int firstNumber = i / 10;
+                int secondNumber = i % 10;
+                if (firstNumber <= 9) {
+                    sumNumber += firstNumber + secondNumber;
                 }
-                if (first > 9) {
-                    int x = first / 10;
-                    int y = first % 10;
-                    sum += x + y + second;
+                if (firstNumber > 9) {
+                    int x = firstNumber / 10;
+                    int y = firstNumber % 10;
+                    sumNumber += x + y + secondNumber;
                 }
             } else {
-                sum += element;
+                sumNumber += i;
             }
         }
-        stringBuilder.append(sum);
-        return stringBuilder;
+        return sumNumber;
     }
 }
+
