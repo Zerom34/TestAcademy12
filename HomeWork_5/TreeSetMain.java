@@ -1,4 +1,6 @@
 package HomeWork_5;
+
+import HomeWork_5.BTM.InfDel;
 import HomeWork_5.BTM.InfSort;
 import HomeWork_5.BTM.InfSpeed;
 import HomeWork_5.BTM.InfToList;
