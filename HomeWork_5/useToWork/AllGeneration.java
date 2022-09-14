@@ -1,4 +1,4 @@
-package HomeWork_5.UseToWork;
+package HomeWork_5.useToWork;
 
 import java.util.Random;
 

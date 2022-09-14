@@ -1,4 +1,4 @@
-package HomeWork_5.DTOpa;
+package HomeWork_5.dto;
 
 public class Person {
     private String name, nick, password;

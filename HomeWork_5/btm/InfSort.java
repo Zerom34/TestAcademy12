@@ -1,11 +1,11 @@
-package HomeWork_5.BTM;
+package HomeWork_5.btm;
 
-import HomeWork_5.Comparator.ComparatorLengthOfPassword;
-import HomeWork_5.Comparator.ComparatorLengthOfPasswordAndNick;
-import HomeWork_5.Comparator.ComparatorOfAge;
-import HomeWork_5.Comparator.ComparatorOfAgeAndAnimalName;
-import HomeWork_5.DTOpa.Animal;
-import HomeWork_5.DTOpa.Person;
+import HomeWork_5.comparator.ComparatorLengthOfPassword;
+import HomeWork_5.comparator.ComparatorLengthOfPasswordAndNick;
+import HomeWork_5.comparator.ComparatorOfAge;
+import HomeWork_5.comparator.ComparatorOfAgeAndAnimalName;
+import HomeWork_5.dto.Animal;
+import HomeWork_5.dto.Person;
 import java.util.*;
 
 public class InfSort {

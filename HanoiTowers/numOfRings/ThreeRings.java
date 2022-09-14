@@ -1,4 +1,4 @@
-package HanoiTowers.NumOfRings;
+package HanoiTowers.numOfRings;
 import java.util.Scanner;
 public class ThreeRings {
     public static void Three() {

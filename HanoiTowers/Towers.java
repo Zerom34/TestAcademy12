@@ -1,6 +1,6 @@
 package HanoiTowers;
-import HanoiTowers.NumOfRings.FourRings;
-import HanoiTowers.NumOfRings.ThreeRings;
+import HanoiTowers.numOfRings.FourRings;
+import HanoiTowers.numOfRings.ThreeRings;
 
 import java.util.Scanner;
 public class Towers {

@@ -1,6 +1,6 @@
-package HomeWork_5.Comparator;
+package HomeWork_5.comparator;
 
-import HomeWork_5.DTOpa.Animal;
+import HomeWork_5.dto.Animal;
 import java.util.Comparator;
 
 public class ComparatorOfAge implements Comparator <Animal> {

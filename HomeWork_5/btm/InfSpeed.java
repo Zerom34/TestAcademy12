@@ -1,4 +1,4 @@
-package HomeWork_5.BTM;
+package HomeWork_5.btm;
 
 import java.util.*;
 

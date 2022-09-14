@@ -1,5 +1,5 @@
-package HomeWork_5.Comparator;
-import HomeWork_5.DTOpa.Person;
+package HomeWork_5.comparator;
+import HomeWork_5.dto.Person;
 
 import java.util.Comparator;
 

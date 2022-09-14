@@ -1,6 +1,6 @@
-package HomeWork_5.Comparator;
+package HomeWork_5.comparator;
 
-import HomeWork_5.DTOpa.Person;
+import HomeWork_5.dto.Person;
 import java.util.Comparator;
 
 public class ComparatorLengthOfPasswordAndNick implements Comparator<Person> {

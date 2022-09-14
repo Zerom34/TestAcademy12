@@ -1,8 +1,8 @@
-package HomeWork_5.BTM;
+package HomeWork_5.btm;
 
-import HomeWork_5.DTOpa.Animal;
-import HomeWork_5.DTOpa.Person;
-import HomeWork_5.UseToWork.AllGeneration;
+import HomeWork_5.dto.Animal;
+import HomeWork_5.dto.Person;
+import HomeWork_5.useToWork.AllGeneration;
 
 import java.util.*;
 

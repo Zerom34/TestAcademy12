@@ -1,11 +1,11 @@
 package HomeWork_5;
 
-import HomeWork_5.BTM.InfDel;
-import HomeWork_5.BTM.InfSort;
-import HomeWork_5.BTM.InfSpeed;
-import HomeWork_5.BTM.InfToList;
-import HomeWork_5.DTOpa.Animal;
-import HomeWork_5.DTOpa.Person;
+import HomeWork_5.btm.InfDel;
+import HomeWork_5.btm.InfSort;
+import HomeWork_5.btm.InfSpeed;
+import HomeWork_5.btm.InfToList;
+import HomeWork_5.dto.Animal;
+import HomeWork_5.dto.Person;
 import java.util.*;
 
 public class HashSetMain {
