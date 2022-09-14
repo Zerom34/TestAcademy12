@@ -6,7 +6,7 @@ import HomeWork_6.Quest4.SearchDecorat;
 import HomeWork_6.WorkWithColec.FileWorker;
 
 public class Main {
-    public static String file = FileWorker.readerF("C:\\Tools\\Java\\Proj\\Md-JC1-113-22\\HomeWork\\src\\warAndPeace.txt");
+    public static String file = FileWorker.readerF("D:\\GIT\\TestAcademy12\\warAndPeace.txt");
     //"C:\\Tools\\Java\\Proj\\Md-JC1-113-22\\HomeWork\\src\\warAndPeace.txt"
     public static void main(String[] args){
         ISearchEngine es = new EasySearch();
