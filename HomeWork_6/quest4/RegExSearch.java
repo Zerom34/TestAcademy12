@@ -1,6 +1,6 @@
-package HomeWork_6.Quest4;
+package HomeWork_6.quest4;
 
-import HomeWork_6.Interf.ISearchEngine;
+import HomeWork_6.interf.ISearchEngine;
 import java.util.regex.*;
 public class RegExSearch implements ISearchEngine {
     @Override

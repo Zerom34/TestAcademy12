@@ -1,7 +1,7 @@
 package Test.HomeWork_6.Quest4;
 
-import HomeWork_6.Interf.ISearchEngine;
-import HomeWork_6.Quest4.RegExSearch;
+import HomeWork_6.interf.ISearchEngine;
+import HomeWork_6.quest4.RegExSearch;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

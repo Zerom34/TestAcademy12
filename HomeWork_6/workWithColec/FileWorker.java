@@ -1,5 +1,5 @@
-package HomeWork_6.WorkWithColec;
-import HomeWork_6.Comporator.ComparatorToAR;
+package HomeWork_6.workWithColec;
+import HomeWork_6.comporator.ComparatorToAR;
 
 import java.util.*;
 import java.io.FileReader;

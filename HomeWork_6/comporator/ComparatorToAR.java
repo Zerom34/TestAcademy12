@@ -1,4 +1,4 @@
-package HomeWork_6.Comporator;
+package HomeWork_6.comporator;
 
 import java.util.Map.Entry;
 import java.util.Comparator;

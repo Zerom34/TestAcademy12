@@ -1,5 +1,5 @@
-package HomeWork_6.Quest4;
-import HomeWork_6.Interf.ISearchEngine;
+package HomeWork_6.quest4;
+import HomeWork_6.interf.ISearchEngine;
 
 public class EasySearch implements ISearchEngine {
 

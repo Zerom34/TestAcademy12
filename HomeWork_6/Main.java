@@ -1,18 +1,17 @@
 package HomeWork_6;
-import HomeWork_6.Interf.ISearchEngine;
-import HomeWork_6.Quest4.EasySearch;
-import HomeWork_6.Quest4.RegExSearch;
-import HomeWork_6.Quest4.SearchDecorat;
-import HomeWork_6.WorkWithColec.FileWorker;
+import HomeWork_6.interf.ISearchEngine;
+import HomeWork_6.quest4.EasySearch;
+import HomeWork_6.quest4.RegExSearch;
+import HomeWork_6.quest4.SearchDecorat;
+import HomeWork_6.workWithColec.FileWorker;
 
 public class Main {
-    public static String file = FileWorker.readerF("C:\\Tools\\Java\\Proj\\Md-JC1-113-22\\HomeWork\\src\\warAndPeace.txt");
     //"C:\\Tools\\Java\\Proj\\Md-JC1-113-22\\HomeWork\\src\\warAndPeace.txt"
     public static void main(String[] args){
         ISearchEngine es = new EasySearch();
         ISearchEngine reg = new RegExSearch();
         ISearchEngine ignore = new SearchDecorat(new RegExSearch());
-
+        String file = FileWorker.readerF("");
         //Поиск зависимый от регистра
         // Поиск слова мир
         System.out.println("EasySearch. Слово мир повторяется: " + es.search(file, "мир") + " раза");

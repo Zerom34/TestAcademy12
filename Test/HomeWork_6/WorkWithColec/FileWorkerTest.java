@@ -1,6 +1,6 @@
 package Test.HomeWork_6.WorkWithColec;
 
-import HomeWork_6.WorkWithColec.FileWorker;
+import HomeWork_6.workWithColec.FileWorker;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
