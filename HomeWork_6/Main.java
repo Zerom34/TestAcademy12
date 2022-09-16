@@ -11,7 +11,7 @@ public class Main {
         ISearchEngine es = new EasySearch();
         ISearchEngine reg = new RegExSearch();
         ISearchEngine ignore = new SearchDecorat(new RegExSearch());
-        String file = FileWorker.readerF("");
+        String file = FileWorker.readerF(""); //Относительный путь сделать
         //Поиск зависимый от регистра
         // Поиск слова мир
         System.out.println("EasySearch. Слово мир повторяется: " + es.search(file, "мир") + " раза");

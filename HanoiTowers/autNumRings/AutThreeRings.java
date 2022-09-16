@@ -1,12 +1,11 @@
-package HanoiTowers.numOfRings;
-import java.util.Scanner;
-public class ThreeRings {
-    public static void Three() {
-        Scanner scan = new Scanner(System.in);
+package HanoiTowers.autNumRings;
+
+public class AutThreeRings {
+    public static void autThreeR() {
         int ourRingWhoGo;
         int choose = 0;
         int a;
-        int counter = 0;
+        long counter = 0;
         String watchArray;
         int[][] ourArray = new int[][]     //Объявление массива в удобном мне виде
                 {
@@ -16,10 +15,11 @@ public class ThreeRings {
                         {9, 9, 9}
                 };
             while (choose != 2){
-                System.out.println("Чего вы желаете?");
+                /*System.out.println("Чего вы желаете?");
                 System.out.println("1. Сделать ход");
-                System.out.println("2. Закончить игру");
-                choose = scan.nextInt();
+                System.out.println("2. Закончить игру");*/
+                //choose = scan.nextInt();
+                choose =1; //scan.nextInt()
                 if (choose == 2){
                     break;
                 }
@@ -34,11 +34,19 @@ public class ThreeRings {
                     }
                     System.out.println(watchArray); //Вывод экрана игры для игрока
                 }
-                System.out.println("Выберите стержень с которого будете переносить кольца"); //Начало кода вывода для выбора столба с которого перенесется кольцо
+                System.out.println();
+                /*System.out.println("Выберите стержень с которого будете переносить кольца"); //Начало кода вывода для выбора столба с которого перенесется кольцо
                 System.out.println("1. Первый столбик");
                 System.out.println("2. Второй столбик");
-                System.out.println("3. Третий столбик");
-                int gamePlay = scan.nextInt(); //Конец кода вывода для выбора столба с которого перенесется кольцо
+                System.out.println("3. Третий столбик");*/
+                //Random
+                int min = 1;
+                int max = 2;
+                int min0 = 1;
+                int max0 = 3;
+                double result = ((Math.random()*((max0-min0)+1))+min0);
+                int res = (int) result;
+                int gamePlay = res; //Конец кода вывода для выбора столба с которого перенесется кольцо
 
                 switch (gamePlay) {
                     case 1:
@@ -60,11 +68,9 @@ public class ThreeRings {
                         ourRingWhoGo = ourArray[a][0];
                         int mem0 = a;
                         ourArray[a][0] = 0;
-
-                        System.out.println("Выберите на какой стержень желаете перенести кольцо");
-                        System.out.println("1. 1>>2");
-                        System.out.println("2. 1>>3");
-                        int chooseOneWhatRingTo = scan.nextInt();
+                        double result2 = ((Math.random()*((max-min)+1))+min);
+                        int res2 = (int) result2;
+                        int chooseOneWhatRingTo = res2;
                         switch (chooseOneWhatRingTo) { //Сам ход: перенос колец на выбран. место
                             case 1:
 
@@ -90,8 +96,6 @@ public class ThreeRings {
                                 counter++;
                                 break;
                             case 2:
-
-
                                 a = 0;
                                 while (ourArray[a][2] == 0) {//!!!!Начало кода для определения какое кольцо на стержне переносится
                                     if (ourArray[a][2] == 1 || ourArray[a][2] == 2 || ourArray[a][2] == 3) {
@@ -136,14 +140,12 @@ public class ThreeRings {
                         ourRingWhoGo = ourArray[a][1];
                         int mem1 = a;
                         ourArray[a][1] = 0;
-                        System.out.println("Выберите на какой столбец желаете перенести кольцо");
-                        System.out.println("1. 2>>1");
-                        System.out.println("2. 2>>3");
-                        int chooseTwoWhatRingTo = scan.nextInt();
+
+                        double result3 = ((Math.random()*((max-min)+1))+min);
+                        int res3 = (int) result3;
+                        int chooseTwoWhatRingTo = res3;
                         switch (chooseTwoWhatRingTo) { //Сам код: перенос колец на выбран. место
                             case 1:
-
-
                                 a = 0;
                                 while (ourArray[a][0] == 0) {//!!!!Начало кода для определения какое кольцо на столбе переносится
                                     if (ourArray[a][0] == 1 || ourArray[a][0] == 2 || ourArray[a][0] == 3) {
@@ -212,10 +214,9 @@ public class ThreeRings {
                                 ourRingWhoGo = ourArray[a][2];
                                 int mem2 = a;
                                 ourArray[a][2] = 0;
-                                System.out.println("Выберите на какой столбец желаете перенести кольцо");
-                                System.out.println("1. 3>>1");
-                                System.out.println("2. 3>>2");
-                                int chooseThreeWhatRingTo = scan.nextInt();
+                                double result4 = ((Math.random()*((max-min)+1))+min);
+                                int res4 = (int) result4;
+                                int chooseThreeWhatRingTo = res4;
                                 switch (chooseThreeWhatRingTo) { //Сам код: перенос колец на выбран. место
                                     case 1:
 
@@ -282,6 +283,7 @@ public class ThreeRings {
                     }
                     System.out.println(watchArray);   ////Вывод экрана игры для игрока после хода
                 }
+                System.out.println();
                 if (ourArray[0][2] == 1 && ourArray[1][2] == 2 && ourArray[2][2] == 3){
                     System.out.println("Поздравляю, вы выиграли. Вам потребоволось " + counter + " ходов");
                     choose = 2;
