@@ -1,5 +1,4 @@
 package HomeWork_6;
-
 import HomeWork_6.interf.ISearchEngine;
 import HomeWork_6.quest4.EasySearch;
 import HomeWork_6.workWithColec.FileWorkerQ6;
