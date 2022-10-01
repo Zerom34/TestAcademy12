@@ -1,3 +1,0 @@
-warAndPeace.txt: слово 6 повторяется 60
-warAndPeace.txt: слово 6 повторяется 60
-warAndPeace.txt: слово 4 повторяется 32

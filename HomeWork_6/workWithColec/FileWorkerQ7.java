@@ -2,7 +2,7 @@ package HomeWork_6.workWithColec;
 import java.io.*;
 import java.nio.file.*;
 import java.util.Scanner;
-public class FileWorkerQ6 {
+public class FileWorkerQ7 {
     private static String bookPath;
     private static String world;
     private static String PATH = "";
@@ -27,7 +27,7 @@ public class FileWorkerQ6 {
         PATH = scan.nextLine();
         File file = new File(PATH);
         if (!file.isDirectory()) {
-            System.out.println("Указан неверный путь");
+            System.out.println(" ");
         }
         return PATH;
     }
@@ -83,11 +83,17 @@ public class FileWorkerQ6 {
         return sbuild.toString();
     }
 
-    public static void resTFile(String bookName, String findW, Long number) {
-
-        String ourNewFile = "res.txt";
+    public static void resTFile(String name, String findW, Long number) {
+        try {
+            File file = new File("resultQ7.txt");
+            if (file.createNewFile()) {System.out.println("File created");}
+        }
+        catch (Exception e) {
+            System.err.println(e);
+        }
+        String ourNewFile = "resultQ7.txt";
         Path path = Paths.get(ourNewFile);
-        String res = bookName + ": слово " + findW + " повторяется " + number + "\n";
+        String res = name + ": слово " + findW + " повторяется " + number + "\n";
         byte[] bs = res.getBytes();
         try {
             Files.write(path, bs, StandardOpenOption.APPEND);
