@@ -6,12 +6,13 @@ import HomeWork_6.quest4.SearchDecorat;
 import HomeWork_6.workWithColec.FileWorker;
 
 public class Main {
-    //"C:\\Tools\\Java\\Proj\\Md-JC1-113-22\\HomeWork\\src\\warAndPeace.txt"
+    //src\\warAndPeace.txt"
     public static void main(String[] args){
         ISearchEngine es = new EasySearch();
         ISearchEngine reg = new RegExSearch();
         ISearchEngine ignore = new SearchDecorat(new RegExSearch());
-        String file = FileWorker.readerF(""); //Относительный путь сделать
+        String file = FileWorker.readerF( "library\\warAndPeace.txt");
+
         //Поиск зависимый от регистра
         // Поиск слова мир
         System.out.println("EasySearch. Слово мир повторяется: " + es.search(file, "мир") + " раза");
