@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FileWorkerQ7Test {
     @Test
@@ -35,8 +36,7 @@ class FileWorkerQ7Test {
             throw new RuntimeException(e);
         }
         //Файл сравнивается с тем, что был создан для теста
-        boolean result = book.trim().equals(book2);
-        assertTrue(result);
+        assertEquals(book,book2);
     }
     @Test
     public void test2() {
@@ -48,7 +48,6 @@ class FileWorkerQ7Test {
             throw new RuntimeException(e);
         }
         //Тест при изначальном наличии файла. Файл, созданый ранее, его содержимое сравнивается с указанным
-        boolean result = book.trim().equals("D:\\Java\\IntelliJ IDEA Community Edition 2022.2.2\\Proj\\Test\\HomeWork_6\\WorkWithColec\\TestingBooks: world stop use 0");
-        assertTrue(result);
+        assertEquals("D:\\Java\\IntelliJ IDEA Community Edition 2022.2.2\\Proj\\Test\\HomeWork_6\\WorkWithColec\\TestingBooks: world stop use 0", book);
     }
 }

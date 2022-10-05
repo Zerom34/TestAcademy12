@@ -29,7 +29,6 @@ class fiOfBookFrListTest {
             throw new RuntimeException(e);
         }
         //Файл сравнивается с тем, что был создан для теста
-        boolean result = book.trim().equals(book2);
-        assertTrue(result);
+        assertEquals(book2,book);
     }
 }
