@@ -9,10 +9,10 @@ public class MainFor7Q {
         String findW = "";
         String PATH = "";
         while (!findW.equals("final") || !PATH.equals("final")) {
+            ISearchEngine es = new EasySearch();
             PATH = FileWorkerQ7.pathFromC();
             FileWorkerQ7.ourBooksFromLib((PATH));
             String stringBook = FileWorkerQ7.readerF(FileWorkerQ7.usePathBook(PATH));
-            ISearchEngine es = new EasySearch();
             Long counter = es.search(stringBook, FileWorkerQ7.searchingWorld());
             String name = FileWorkerQ7.getPathBook();
             findW = FileWorkerQ7.getWorld();

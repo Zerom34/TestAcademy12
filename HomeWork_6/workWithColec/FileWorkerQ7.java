@@ -64,22 +64,15 @@ public class FileWorkerQ7 {
         StringBuilder sbuild = new StringBuilder();
         try {
             read = new FileReader(PATH);
-        } catch (FileNotFoundException e) {
-            System.out.println("Нет указанного файла");
-        }
+        } catch (FileNotFoundException e) {System.out.println("Нет указанного файла");}
         try {
             int checkF;
             do {
                 checkF = read.read();
-                if (checkF != -1) {
-                    sbuild.append(Character.toChars(checkF));
-                }
+                if (checkF != -1) {sbuild.append(Character.toChars(checkF));}
             } while (checkF != -1);
-        } catch (IOException e) {
-            System.out.println("Ошибки при вычитки");
-        } catch (NullPointerException e) {
-            System.out.println("Нет указанного файла");
-        }
+        } catch (IOException e) {System.out.println("Ошибки при вычитки");}
+        catch (NullPointerException e) {System.out.println("Нет указанного файла");}
         return sbuild.toString();
     }
 
@@ -93,7 +86,7 @@ public class FileWorkerQ7 {
         }
         String ourNewFile = "resultQ7.txt";
         Path path = Paths.get(ourNewFile);
-        String res = name + ": слово " + findW + " повторяется " + number + "\n";
+        String res = name + ": world " + findW + " use " + number + "\n";
         byte[] bs = res.getBytes();
         try {
             Files.write(path, bs, StandardOpenOption.APPEND);

@@ -1,0 +1,2 @@
+D:\Java\IntelliJ IDEA Community Edition 2022.2.2\Proj\Test\HomeWork_6\WorkWithColec\TestingBooks\b.txt : world stop use 0
+D:\Java\IntelliJ IDEA Community Edition 2022.2.2\Proj\Test\HomeWork_6\WorkWithColec\TestingBooks\p.txt : world stop use 0

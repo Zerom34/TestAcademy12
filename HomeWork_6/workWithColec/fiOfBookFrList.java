@@ -26,7 +26,7 @@ public class fiOfBookFrList implements Runnable {
         EasySearch es = new EasySearch();
         try (FileWriter fileWor = new FileWriter(res, true)) {
             long count = es.search(filToString(book), findWord);
-            fileWor.write(book + " : слово " + findWord + " повторяется " + count + "\n" + " раз");
+            fileWor.write(book + " : world " + findWord + " use " + count + "\n");
         }
         catch (IOException e) {throw new RuntimeException(e);}
     }
