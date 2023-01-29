@@ -8,7 +8,7 @@ public class Towers {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Добро пожаловать в Ханойские Башни");
+        System.out.println("Добро пожаловать в игру Ханойские Башни");
         System.out.println("Выберите режим игры:");
         System.out.println("1. Ручной режим");
         System.out.println("2. Автоматический режим");
